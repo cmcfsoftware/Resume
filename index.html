@@ -35,7 +35,7 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Conor McFeely - Software Engineer</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/blank_profile.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile_picture.jpg" alt="">
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,15 +72,15 @@
 
           <div class="subheading">QUB Software Engineering Graduate [First Class Honors]
           </div>
-          <div class="subheading mb-5">Belfast - Northern Ireland
+          <div class="subheading mb-5">Coleraine/Belfast - Northern Ireland
           </div>
           <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt ipsum id elit facilisis, sit amet placerat nibh vestibulum. Sed sit amet tortor elementum, ultrices sapien iaculis, lobortis velit. Nullam egestas tristique tellus ut viverra. In maximus fringilla condimentum. Sed placerat quis neque id interdum.</p>
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/conor-m-3181b5152/">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
@@ -115,7 +115,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Junior Software Developer (Placement)</h3>
               <div class="subheading mb-3">Department of Finance, Belfast</div>
-              <p>I completed my placement year as a junior developer within the Department of Finance’s Digital Development team. Worked developing ASP.NET MVC web applications using .NET Framework and .NET Core for use within the NorthernIreland Civil Service. During the year I worked in an agile team that adopted Kanban for its development process.</p>
+              <p>I completed my placement year as a junior developer within the Department of Finance's Digital Development team. Worked developing ASP.NET MVC web applications using .NET Framework and .NET Core for use within the NorthernIreland Civil Service. During the year I worked in an agile team that adopted Kanban for its development process.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">July 2018 - June 2019</span>
@@ -230,29 +230,59 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
         <div class="my-auto">
-          <h2 class="mb-1">Personal Projects</h2>
-          <p class="mb-5">Projects I have completed as part of structured learning, practising a new skillset or satisfying my own curiosity on a subject</p>
+          <h2 class="mb-1">Projects</h2>
+          <p class="mb-5">Projects I have completed as part of structured learning, practising a new skillset or satisfying my own curiosity on a subject.</p>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">NI Assembly Election Voting Graphs    <a href="https://github.com/cmcfsoftware"><i class="fa fa-github fa-2x"></i></a></h3>
+              <h3 class="mb-0">NI Assembly Election Voting Graphs    <a href="https://github.com/cmcfsoftware/NI-Assembly-Election-Graphs"><i class="fa fa-github fa-2x"></i></a></h3>
 
               <div class="subheading mb-3">Produced a website to view and display graphs I created that showed the results of past Northern Ireland assembly elections. The site enables you to view the election results for each 
-                constituency and see the vote transfers at each stage of the count. The graphs for this project were created in python with the website itself being a flask web app. <a href="#">More detailed Blog Post</a>
+                constituency and see the vote transfers at each stage of the count. The graphs for this project were created in python with the website itself being a flask web app. 
               </div>
-              <img class="img-fluid border mb-2" src="img/NI_Constituency_Boundaries.png" alt="Index page of flask web app"> 
-              <img class="img-fluid border mb-2" src="img/One_Count_Transfer_gif.gif" alt="Gif showing votes transfers for first count in Belfast East 2017">
+
+
+              <p>Index Page of webapp (uses google maps api and geojson of constituency borders to create a clickable map to navigate between constituencies):</p>
+              <img class="img-fluid border mb-5" src="img/election-graphs/NI_Constituency_Boundaries.png" alt="Index page of flask web app"> 
+              <p>Gif showing transfer of votes for Count one in Belfast East 2017:</p>
+              <img class="img-fluid border mb-5" src="img/election-graphs/One_Count_Transfer_gif.gif" alt="Gif showing votes transfers for first count in Belfast East 2017">
+
+              <h4>Project Info</h4>
+              <p class="mt-3">
+                I began this project as an exercise to gain a better understanding of Proportional Representation and how the Single Transferable Vote system works. I found the datasets from http://electionsni.org/data/ and set about exploring the data to satisfy my curiosity. 
+                I created 3 graphs for each count: (i) an initial graph showing that state of the count at this stage highlighting the candidate(s) that have been eliminated 
+                and those that have been elected, (ii) a second graph that highlights how the votes have been transferred, and (iii) a third showing the election state before
+                the next count begins.
+                There is also a final graph for each constituency count that shows which candidates were elected after the final count was finished 
+                (in the case that the final count did not result in 5/6 candidates getting past the election vote threshold).
+              </p>
+              <img class="img-fluid border mb-2" src="img/election-graphs/3_election_count_graphs.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
+
+              <p>
+                The project initially consisted of only these graphs for each constituency over the 3 election years available (2011, 2016, 2017). I decided to also create 
+                graphs to showing information about the voter distributions. These showed eligible voters, actual turnout and spoiled votes for each constituency. Also created 
+                graphs to show (i) the party distribution for running candidates and of (ii) winning candidates for each constituency count.
+              </p>
+
+              <img class="img-fluid border mb-5" src="img/election-graphs/constituency_voter_stats.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
+              
+
+              <img class="img-fluid border mb-2" src="img/election-graphs/candidate_distribution_pie_charts.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
+
+
             </div>
           </div>
 
+          <hr/>
+
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Reddit Timespan Viewer <a href="https://github.com/cmcfsoftware"><i class="fa fa-github fa-2x"></i></a></h3>
+              <h3 class="mb-0">Reddit Timespan Viewer <a href="https://github.com/cmcfsoftware/reddit-timespan-viewer"><i class="fa fa-github fa-2x"></i></a></h3>
               <div class="subheading mb-3">Created an application to view Reddit posts within a specified date range as this had became a depreciated and unsupported feature of native reddit search. This project originated as a 
-                way to safely view subreddits without risk of spoilers when watching a TV show after its origional release date. <a href="#">More detailed Blog Post</a>
+                way to safely view subreddits without risk of spoilers when watching a TV show after its origional release date.
               </div>
               <img class="img-fluid mb-5" src="img/reddit_timespan.png" alt="test image">
-              <img class="img-fluid" src="img/reddit_viewer_results.png" alt="test image">
+              <img class="img-fluid" src="img/reddit_timespan_viewer_results.png" alt="test image">
 
             </div>
           </div>
@@ -260,15 +290,19 @@
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Cloud Computing Project: Search Engine <a href="https://github.com/cmcfsoftware"><i class="fa fa-github fa-2x"></i></a></h3>
-              <div class="subheading mb-3">As part of my final year module Cloud Computing I was tasked with creating a search ..... [find where we have written before hand and copy] <a href="#">More detailed Blog Post</a>
+              <h3 class="mb-0">Cloud Computing Project: Search Engine <a href="https://github.com/ConorMcFeelyQUB/"><i class="fa fa-github fa-2x"></i></a></h3>
+              <div class="subheading mb-3">As part of my final year module in Cloud Computing I was tasked with architecting, implementing, deploying, managing and 
+                monitoring a search engine system. This project was a good challenge and allowed me to deeper my knowledge and experience with using both Google Cloup 
+                Platform and AWS.
               </div>
               <img class="img-fluid" src="img/my-implementation.png" alt="test image">
+
+              <h4>Idexer Component</h4>
+              <img class="img-fluid" src="img/indexer_component.png" alt="test image">
+
+
             </div>
           </div>
-
-          
-
 
         </div>
       </section>
