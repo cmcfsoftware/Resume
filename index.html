@@ -74,7 +74,7 @@
           </div>
           <div class="subheading mb-5">Coleraine/Belfast - Northern Ireland
           </div>
-          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt ipsum id elit facilisis, sit amet placerat nibh vestibulum. Sed sit amet tortor elementum, ultrices sapien iaculis, lobortis velit. Nullam egestas tristique tellus ut viverra. In maximus fringilla condimentum. Sed placerat quis neque id interdum.</p>
+          <p class="mb-5">Hello I'm Conor McFeely a QUB Software Engineering Graduate. This page contains the details of my education and past employment as well as showcasing some of my projects.</p>
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/conor-m-3181b5152/">
@@ -241,106 +241,52 @@
                 constituency and see the vote transfers at each stage of the count. The graphs for this project were created in python with the website itself being a flask web app. 
               </div>
 
-
-              <p>Index Page of webapp (uses google maps api and geojson of constituency borders to create a clickable map to navigate between constituencies):</p>
-              <img class="img-fluid border mb-5" src="img/election-graphs/NI_Constituency_Boundaries.png" alt="Index page of flask web app"> 
-              <p>Gif showing transfer of votes for Count one in Belfast East 2017:</p>
               <img class="img-fluid border mb-5" src="img/election-graphs/One_Count_Transfer_gif.gif" alt="Gif showing votes transfers for first count in Belfast East 2017">
-              <p>Constituency count result page</p>
-              <img class="img-fluid border mb-5" src="img/election-graphs/full_constituency_result_page.png" alt="constituency result page">
-
-              <h4>Project Info</h4>
-              <p class="mt-3">
-                I began this project as an exercise to gain a better understanding of Proportional Representation and how the Single Transferable Vote system works. I found the datasets from http://electionsni.org/data/ and set about exploring the data to satisfy my curiosity. 
-                I created 3 graphs for each count: (i) an initial graph showing that state of the count at this stage highlighting the candidate(s) that have been eliminated 
-                and those that have been elected, (ii) a second graph that highlights how the votes have been transferred, and (iii) a third showing the election state before
-                the next count begins.
-                There is also a final graph for each constituency count that shows which candidates were elected after the final count was finished 
-                (in the case that the final count did not result in 5/6 candidates getting past the election vote threshold).
-              </p>
-              <img class="img-fluid border mb-2" src="img/election-graphs/3_election_count_graphs.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
-
-              <p>
-                The project initially consisted of only these graphs for each constituency over the 3 election years available (2011, 2016, 2017). I decided to also create 
-                graphs to showing information about the voter distributions. These showed eligible voters, actual turnout and spoiled votes for each constituency. Also created 
-                graphs to show (i) the party distribution for running candidates and of (ii) winning candidates for each constituency count.
-              </p>
-
-              <img class="img-fluid border mb-5" src="img/election-graphs/constituency_voter_stats.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
-              
-
-              <img class="img-fluid border mb-5" src="img/election-graphs/candidate_distribution_pie_charts.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
 
 
-              <p>
-                With this project I wanted to gain knowledge of GitHub's CI features. To acomplish this I implmemted some basic unit tests using pytest and made use of GitHubs action workflows to create a testing job 
-                to run on pushes to the repository.
-              </p>
-              <img class="img-fluid border mb-5" src="img/election-graphs/github_tests.png" alt="github tests passing">
-              <img class="img-fluid border mb-5" src="img/election-graphs/github_actions_yml.png" alt="github actions yml">
+              <a class="btn btn-primary mb-3" data-toggle="collapse" href="#NIAssemblyBlog" role="button" aria-expanded="false" aria-controls="NIAssemblyBlog">See more details about the NI Assembly Graph project</a>
+              <div class="collapse multi-collapse" id="NIAssemblyBlog">
+
+                <h4>Project Info</h4>
+                <p class="mt-3">
+                  I began this project as an exercise to gain a better understanding of Proportional Representation and how the Single Transferable Vote system works. I found the datasets from http://electionsni.org/data/ and set about exploring the data to satisfy my curiosity. 
+                  I created 3 graphs for each count: (i) an initial graph showing that state of the count at this stage highlighting the candidate(s) that have been eliminated 
+                  and those that have been elected, (ii) a second graph that highlights how the votes have been transferred, and (iii) a third showing the election state before
+                  the next count begins.
+                  There is also a final graph for each constituency count that shows which candidates were elected after the final count was finished 
+                  (in the case that the final count did not result in 5/6 candidates getting past the election vote threshold).
+                </p>
+                <img class="img-fluid border mb-2" src="img/election-graphs/3_election_count_graphs.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
+
+                <p>
+                  The project initially consisted of only these graphs for each constituency over the 3 election years available (2011, 2016, 2017). I decided to also create 
+                  graphs to showing information about the voter distributions. These showed eligible voters, actual turnout and spoiled votes for each constituency. Also created 
+                  graphs to show (i) the party distribution for running candidates and of (ii) winning candidates for each constituency count.
+                </p>
+
+                <img class="img-fluid border mb-5" src="img/election-graphs/constituency_voter_stats.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
+                
+
+                <img class="img-fluid border mb-5" src="img/election-graphs/candidate_distribution_pie_charts.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
 
 
 
-            </div>
-          </div>
+                <p>On a constituency's result page you can see all the graphs mentioned above for the of the election results in 2011, 2016 and 2017.</p>
+                <img class="img-fluid border mb-5" src="img/election-graphs/full_constituency_result_page.png" alt="constituency result page">
 
-          <hr/>
+                <p>The index page of the site contains a map highlighting the constituency boundaries within Northern Ireland. Clicking on a constituency will bring the
+                  user to that constituency's result page.
+                </p>
+                <img class="img-fluid border mb-5" src="img/election-graphs/NI_Constituency_Boundaries.png" alt="Index page of flask web app">
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Reddit Timespan Viewer <a href="https://github.com/cmcfsoftware/reddit-timespan-viewer"><i class="fa fa-github fa-2x"></i></a></h3>
-              <div class="subheading mb-3">Created an application to view Reddit posts within a specified date range as this had became a depreciated and unsupported feature of native reddit search. This project originated as a 
-                way to safely view subreddits without risk of spoilers when watching a TV show after its origional release date.
+        
+                <p>
+                  With this project I wanted to gain knowledge of GitHub's CI features. To acomplish this I implmemted some basic unit tests using pytest and made use of GitHubs action workflows to create a testing job 
+                  to run on pushes to the repository.
+                </p>
+                <img class="img-fluid border mb-5" src="img/election-graphs/github_tests.png" alt="github tests passing">
+                <img class="img-fluid border mb-5" src="img/election-graphs/github_actions_yml.png" alt="github actions yml">
               </div>
-
-              <img class="img-fluid mb-5 border" src="img/reddit-timespan/full_index_page.png" alt="Timespan View Search results">
-
-              <h4>Project Info</h4>
-              <p>
-                Began a project wanting to improve my experience working with external APIs. Through research discovered the PushShift API for obtaining reddit data and 
-                thought to combine this with the imdb-api to create an application.
-              </p>
-              <p>
-                The app prompts you with a form to enter the name of the subreddit you wish to view. This input includes an auto complete feature to help users find the 
-                correct subreddit. You can then select a date range to view posts between using the two linked date pickers. (If no date range is supplied the app acts 
-                as a wrapper showing the top posts from the selected subreddit).
-              </p>
-              <img class="img-fluid mb-2 border" src="img/reddit-timespan/subreddit_auto_complete.png" alt="Timespan view subreddit auto complete">
-              <img class="img-fluid mb-5 border" src="img/reddit-timespan/subreddit_auto_complete_code.png" alt="Timespan view subreddit auto complete code">
-
-
-              <p>
-                The app also includes a "TV Show Helper" section. This feature allows uses to search for a TV Series title and recieve back information about its seasons 
-                and episodes specifically the release dates of each episode. This feature make use of https://imdb-api.com/ to obtain the title, season and episode 
-                info of the requested series.
-                A user can enter a TV show name and search, and will be returned the titles most similar to what was entered. From this list the user can select the series
-                they were searching for, or can try another search if it does not appear. After selecting a series the user will be returned the seasons and episodes for 
-                that series.
-
-              </p>
-              <img class="img-fluid mb-3 border" src="img/reddit-timespan/search_waiting.png" alt="Timespan view search waiting">
-              <img class="img-fluid mb-3 border" src="img/reddit-timespan/search_result.png" alt="Timespan view search result">
-              <img class="img-fluid mb-5 border" src="img/reddit-timespan/episode_result.png" alt="Timespan view episode search result">
-
-              <img class="img-fluid mb-5 border" src="img/reddit-timespan/search_series_code.png" alt="Timespan view episode search result">
-
-              <p>
-                I wanted to experiment with the HTML drag and drop api, so implemented a feature allowing users to drag episodes dates from the search results into the date 
-                input boxes directly so no additional typing or use of the date picker is required. 
-              </p>
-
-              <p>
-                The search results are obtained using the PushShift API's subreddit endpoint. The results will show the top 100 posts that match the supplied criteria of 
-                subreddit name and date range.
-              </p>
-
-              <img class="img-fluid mb-3 border" src="img/reddit-timespan/reddit_timespan_viewer_results.png" alt="Timespan view resultspage">
-              <img class="img-fluid mb-3 border" src="img/reddit-timespan/pushshift_search_code.png" alt="Timespan view resultspage">
-
-
-
-
-
 
 
             </div>
@@ -360,145 +306,211 @@
 
               <img class="img-fluid" src="img/cloud-search/my-implementation.png" alt="test image">
 
+              <a class="btn btn-primary mb-3" data-toggle="collapse" href="#CloudSE" role="button" aria-expanded="false" aria-controls="CloudSE">See more details about the Cloud Search Engine project</a>
+              <div class="collapse multi-collapse" id="CloudSE">
 
 
-              <p>
-                The system was composed of three components: 
-                <ul>
-                  <li>A spider indexer that could crawl the web and collect data from pages (was a good citizen that implemented best practices).</li>
-                  <li>An advert system that contains a directory of adverts with associated keywords that could be displayed alongside search results
-                    or could be embedded onto thirdparty sites/services.</li>
-                  <li>A search system that takes user input and returns results by querying the indexed pages and would show relevant adverts alongside the
-                    search results.</li>
-                </ul>
-                Each of the components had a web frontend to faciliate user interaction. These web apps and their backend databases were run on Googles 
-                Cloud Platform making use of their kubernetes engine to provide the web apps and using MYSQL databases hosted on the GCP's Cloud SQL 
-                service to store the required data.  
-                I decided on using GCP as my main provider for implmenting the system where the apps were run in the GKE clusters. I also deployed the apps to AWS EC2 instances
-                for redundancy and to show that the underlying code base was provider agnostic.
+                <h4>Project Info</h4>
+                <p>
+                  The system was composed of three components: 
+                  <ul>
+                    <li>A spider indexer that could crawl the web and collect data from pages (was a good citizen that implemented best practices).</li>
+                    <li>An advert system that contains a directory of adverts with associated keywords that could be displayed alongside search results
+                      or could be embedded onto thirdparty sites/services.</li>
+                    <li>A search system that takes user input and returns results by querying the indexed pages and would show relevant adverts alongside the
+                      search results.</li>
+                  </ul>
+                  Each of the components had a web frontend to faciliate user interaction. These web apps and their backend databases were run on Googles 
+                  Cloud Platform making use of their kubernetes engine to provide the web apps and using MYSQL databases hosted on the GCP's Cloud SQL 
+                  service to store the required data.  
+                  I decided on using GCP as my main provider for implmenting the system where the apps were run in the GKE clusters. I also deployed the apps to AWS EC2 instances
+                  for redundancy and to show that the underlying code base was provider agnostic.
 
-              </p>
-              
+                </p>
+                
 
-              <h4>Idexer Component</h4>
-              <img class="img-fluid border mb-5" src="img/cloud-search/indexer/indexer_component.png" alt="test image">
-              <p>
-                In the indexer a user can provide a URL to a web frontend to allow the system to scrape that page and add it to the database. 
-              </p>
+                <h4>Idexer Component</h4>
+                <img class="img-fluid border mb-5" src="img/cloud-search/indexer/indexer_component.png" alt="test image">
+                <p>
+                  In the indexer a user can provide a URL to a web frontend to allow the system to scrape that page and add it to the database. 
+                </p>
 
-              <img class="img-fluid border mb-3" src="img/cloud-search/indexer/indexer-add.png" alt="test image">
-              <p>
-                After successfully indexing the page you are given the option to crawl the other URLs that were found within the content
-                of the page that has just been indexed.
-              </p>
-              <img class="img-fluid border mb-3" src="img/cloud-search/indexer/index-add-success.png" alt="test image">
-              <p>
-                Image showing how indexed pages appear in the search component.
-              </p>
-              <img class="img-fluid border mb-3" src="img/cloud-search/indexer/index-in-search.png" alt="test image">
-              <p>
-                Below shows some of the the code for the implementation of the Indexer component
-              </p>
+                <img class="img-fluid border mb-3" src="img/cloud-search/indexer/indexer-add.png" alt="test image">
+                <p>
+                  After successfully indexing the page you are given the option to crawl the other URLs that were found within the content
+                  of the page that has just been indexed.
+                </p>
+                <img class="img-fluid border mb-3" src="img/cloud-search/indexer/index-add-success.png" alt="test image">
+                <p>
+                  Image showing how indexed pages appear in the search component.
+                </p>
+                <img class="img-fluid border mb-3" src="img/cloud-search/indexer/index-in-search.png" alt="test image">
+                <p>
+                  Below shows some of the the code for the implementation of the Indexer component
+                </p>
 
-              <img class="img-fluid border mb-5" src="img/cloud-search/indexer/indexer-code.png" alt="test image">
-
-
-
-              <h4>Advert Component</h4>
-              <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert_component.png" alt="test image">
-
-              <p>The advert component allows users to submit new adverts into the database. The user can submit advert content and provide
-                a list of keyword terms that they want their advert to be associated with, they can also provide a url for the advert to link to.
-              </p>
-
-              <img class="img-fluid border mb-3" src="img/cloud-search/advert/Advert-main.png" alt="test image">
-              <img class="img-fluid border mb-3" src="img/cloud-search/advert/Advert-success.png" alt="test image">
-              <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert-add-code.png" alt="test image">
-
-              <p>
-                The component also has a json endpoint to provide requests with relevant advert data. A user can make a request to the endpoint 
-                providing keyword(s) and will recieve back a json response of adverts containing those keywords.
-              </p>
-
-              <p>Example response from the advert component when requesting adverts with the keyword "lemon":</p>
-              <img class="img-fluid border mb-3" src="img/cloud-search/advert/advert-endpoint.png" alt="test image">
-              <p>Below shows some of the code for the advert json endpoint:</p>
-              <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert-endpoint-code.png" alt="test image">
-
-
-              <h4>Search Component</h4>
-              <img class="img-fluid border mb-5" src="img/cloud-search/search/Search_component.png" alt="test image">
-
-              <p>
-                The search component provides users with a web frontend allowing them to input a search term to to query against the indexed pages.
-                The search results will show any indexed pages containing any of the search term and will also display relevant advert alongside the results.
-              </p>
-
-              
-              <img class="img-fluid border mb-3" src="img/cloud-search/search/search-index.png" alt="test image">
-              <p>Image showing search results for the term "search". (The blue advert shown is this image was part of the database initialisation provided to by David Cutting
-                the lecturer of my Cloud Computing Module in which he pokes fun at a testing system of his own creation).
-              </p>
-              <img class="img-fluid border mb-3" src="img/cloud-search/search/search-result.png" alt="test image">
-              <img class="img-fluid border mb-5" src="img/cloud-search/search/search-code.png" alt="test image">
-
-
-              <h4>Provisioning and Scripting</h4>
-              
-              <p>Each of the apps were deployed as a containerised web app. Below you can see the dockerfile for the search component and the 
-                deployment.yaml and service.yaml for use in provisioning and setup of its Kubernetes cluster.
-              </p>
-
-              <img class="img-fluid border mb-3" src="img/cloud-search/scripting/search-docketfile.png" alt="test image">
-              <img class="img-fluid border mb-3" src="img/cloud-search/scripting/search-deployment.png" alt="test image">
-              <img class="img-fluid border mb-5" src="img/cloud-search/scripting/search-service.png" alt="test image">
-
-              <p>
-                The project contains both setup and teardown scripts that can be used to provision and manage 
-                the resources for GCP. 
-              </p>
-              <p>
-                The first script that is run is the api_enable.sh this script ensure that the required APIs are enable for 
-                the project before any of the provision of resources begins:
-              </p>
-              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-enable.png" alt="test image">
-
-              
-              <p>
-                Script for VPC setup and linking API services:
-              </p>
-              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-vpc-setup.png" alt="test image">
-
-              
-              <p>
-                DB setup script configurability at top:
-              </p>
-              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-db-setup.png" alt="test image">
-
-              
-              <p>
-                KE setup:
-              </p>
-              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-ke-setup.png" alt="test image">
-
-
-              <p>
-                KE teardown:
-              </p>
-              
-              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-ke-teardown.png" alt="test image">
-              
-
-              <p>
-                DB teardown:
-              </p>
-              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-db-teardown.png" alt="test image">
+                <img class="img-fluid border mb-5" src="img/cloud-search/indexer/indexer-code.png" alt="test image">
 
 
 
-            
+                <h4>Advert Component</h4>
+                <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert_component.png" alt="test image">
+
+                <p>The advert component allows users to submit new adverts into the database. The user can submit advert content and provide
+                  a list of keyword terms that they want their advert to be associated with, they can also provide a url for the advert to link to.
+                </p>
+
+                <img class="img-fluid border mb-3" src="img/cloud-search/advert/Advert-main.png" alt="test image">
+                <img class="img-fluid border mb-3" src="img/cloud-search/advert/Advert-success.png" alt="test image">
+                <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert-add-code.png" alt="test image">
+
+                <p>
+                  The component also has a json endpoint to provide requests with relevant advert data. A user can make a request to the endpoint 
+                  providing keyword(s) and will recieve back a json response of adverts containing those keywords.
+                </p>
+
+                <p>Example response from the advert component when requesting adverts with the keyword "lemon":</p>
+                <img class="img-fluid border mb-3" src="img/cloud-search/advert/advert-endpoint.png" alt="test image">
+                <p>Below shows some of the code for the advert json endpoint:</p>
+                <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert-endpoint-code.png" alt="test image">
+
+
+                <h4>Search Component</h4>
+                <img class="img-fluid border mb-5" src="img/cloud-search/search/Search_component.png" alt="test image">
+
+                <p>
+                  The search component provides users with a web frontend allowing them to input a search term to to query against the indexed pages.
+                  The search results will show any indexed pages containing any of the search term and will also display relevant advert alongside the results.
+                </p>
+
+                
+                <img class="img-fluid border mb-3" src="img/cloud-search/search/search-index.png" alt="test image">
+                <p>Image showing search results for the term "search". (The blue advert shown is this image was part of the database initialisation provided to by David Cutting
+                  the lecturer of my Cloud Computing Module in which he pokes fun at a testing system of his own creation).
+                </p>
+                <img class="img-fluid border mb-3" src="img/cloud-search/search/search-result.png" alt="test image">
+                <img class="img-fluid border mb-5" src="img/cloud-search/search/search-code.png" alt="test image">
+
+
+                <h4>Provisioning and Scripting</h4>
+                
+                <p>Each of the apps were deployed as a containerised web app. Below you can see the dockerfile for the search component and the 
+                  deployment.yaml and service.yaml for use in provisioning and setup of its Kubernetes cluster.
+                </p>
+
+                <img class="img-fluid border mb-3" src="img/cloud-search/scripting/search-docketfile.png" alt="test image">
+                <img class="img-fluid border mb-3" src="img/cloud-search/scripting/search-deployment.png" alt="test image">
+                <img class="img-fluid border mb-5" src="img/cloud-search/scripting/search-service.png" alt="test image">
+
+                <p>
+                  The project contains both setup and teardown scripts that can be used to provision and manage 
+                  the resources for GCP. 
+                </p>
+                <p>
+                  The first script that is run is the api_enable.sh this script ensure that the required APIs are enable for 
+                  the project before any of the provision of resources begins:
+                </p>
+                <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-enable.png" alt="test image">
+
+                
+                <p>
+                  Script for VPC setup and linking API services:
+                </p>
+                <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-vpc-setup.png" alt="test image">
+
+                
+                <p>
+                  DB setup script configurability at top:
+                </p>
+                <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-db-setup.png" alt="test image">
+
+                
+                <p>
+                  KE setup:
+                </p>
+                <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-ke-setup.png" alt="test image">
+
+
+                <p>
+                  KE teardown:
+                </p>
+                
+                <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-ke-teardown.png" alt="test image">
+                
+
+                <p>
+                  DB teardown:
+                </p>
+                <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-db-teardown.png" alt="test image">
+              </div>
+
             </div>
           </div>
+
+          <hr/>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Reddit Timespan Viewer <a href="https://github.com/cmcfsoftware/reddit-timespan-viewer"><i class="fa fa-github fa-2x"></i></a></h3>
+              <div class="subheading mb-3">Created an application to view Reddit posts within a specified date range as this had became a depreciated and unsupported feature of native reddit search. This project originated as a 
+                way to safely view subreddits without risk of spoilers when watching a TV show after its origional release date.
+              </div>
+
+
+              <a class="btn btn-primary mb-3" data-toggle="collapse" href="#TimespanViewer" role="button" aria-expanded="false" aria-controls="TimespanViewer">See more details about the Reddit TImespan Viewer project</a>
+              <div class="collapse multi-collapse" id="TimespanViewer">
+
+
+                <h4>Project Info</h4>
+                <p>
+                  Began a project wanting to improve my experience working with external APIs. Through research discovered the PushShift API for obtaining reddit data and 
+                  thought to combine this with the imdb-api to create an application.
+                </p>
+                <p>
+                  The app prompts you with a form to enter the name of the subreddit you wish to view. This input includes an auto complete feature to help users find the 
+                  correct subreddit. You can then select a date range to view posts between using the two linked date pickers. (If no date range is supplied the app acts 
+                  as a wrapper showing the top posts from the selected subreddit).
+                </p>
+                <img class="img-fluid mb-2 border" src="img/reddit-timespan/subreddit_auto_complete.png" alt="Timespan view subreddit auto complete">
+                <img class="img-fluid mb-5 border" src="img/reddit-timespan/subreddit_auto_complete_code.png" alt="Timespan view subreddit auto complete code">
+
+
+                <p>
+                  The app also includes a "TV Show Helper" section. This feature allows uses to search for a TV Series title and recieve back information about its seasons 
+                  and episodes specifically the release dates of each episode. This feature make use of https://imdb-api.com/ to obtain the title, season and episode 
+                  info of the requested series.
+                  A user can enter a TV show name and search, and will be returned the titles most similar to what was entered. From this list the user can select the series
+                  they were searching for, or can try another search if it does not appear. After selecting a series the user will be returned the seasons and episodes for 
+                  that series.
+
+                </p>
+                <img class="img-fluid mb-3 border" src="img/reddit-timespan/search_waiting.png" alt="Timespan view search waiting">
+                <img class="img-fluid mb-3 border" src="img/reddit-timespan/search_result.png" alt="Timespan view search result">
+                <img class="img-fluid mb-5 border" src="img/reddit-timespan/episode_result.png" alt="Timespan view episode search result">
+
+                <img class="img-fluid mb-5 border" src="img/reddit-timespan/search_series_code.png" alt="Timespan view episode search result">
+
+                <p>
+                  I wanted to experiment with the HTML drag and drop api, so implemented a feature allowing users to drag episodes dates from the search results into the date 
+                  input boxes directly so no additional typing or use of the date picker is required. 
+                </p>
+
+                <p>
+                  The search results are obtained using the PushShift API's subreddit endpoint. The results will show the top 100 posts that match the supplied criteria of 
+                  subreddit name and date range. Each of these posts can be clicked to navigate to the corresponding reddit post. 
+                </p>
+
+                <img class="img-fluid mb-3 border" src="img/reddit-timespan/reddit_timespan_viewer_results.png" alt="Timespan view resultspage">
+                <img class="img-fluid mb-3 border" src="img/reddit-timespan/pushshift_search_code.png" alt="Timespan view resultspage">
+              </div>
+            </div>
+          </div>
+
+
+
+          <hr/>
+
+
 
         </div>
       </section>
