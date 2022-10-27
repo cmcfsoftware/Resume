@@ -246,6 +246,8 @@
               <img class="img-fluid border mb-5" src="img/election-graphs/NI_Constituency_Boundaries.png" alt="Index page of flask web app"> 
               <p>Gif showing transfer of votes for Count one in Belfast East 2017:</p>
               <img class="img-fluid border mb-5" src="img/election-graphs/One_Count_Transfer_gif.gif" alt="Gif showing votes transfers for first count in Belfast East 2017">
+              <p>Constituency count result page</p>
+              <img class="img-fluid border mb-5" src="img/election-graphs/full_constituency_result_page.png" alt="constituency result page">
 
               <h4>Project Info</h4>
               <p class="mt-3">
@@ -267,7 +269,16 @@
               <img class="img-fluid border mb-5" src="img/election-graphs/constituency_voter_stats.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
               
 
-              <img class="img-fluid border mb-2" src="img/election-graphs/candidate_distribution_pie_charts.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
+              <img class="img-fluid border mb-5" src="img/election-graphs/candidate_distribution_pie_charts.png" alt="Gif showing votes transfers for first count in Belfast East 2017">
+
+
+              <p>
+                With this project I wanted to gain knowledge of GitHub's CI features. To acomplish this I implmemted some basic unit tests using pytest and made use of GitHubs action workflows to create a testing job 
+                to run on pushes to the repository.
+              </p>
+              <img class="img-fluid border mb-5" src="img/election-graphs/github_tests.png" alt="github tests passing">
+              <img class="img-fluid border mb-5" src="img/election-graphs/github_actions_yml.png" alt="github actions yml">
+
 
 
             </div>
@@ -281,12 +292,63 @@
               <div class="subheading mb-3">Created an application to view Reddit posts within a specified date range as this had became a depreciated and unsupported feature of native reddit search. This project originated as a 
                 way to safely view subreddits without risk of spoilers when watching a TV show after its origional release date.
               </div>
-              <img class="img-fluid mb-5" src="img/reddit_timespan.png" alt="test image">
-              <img class="img-fluid" src="img/reddit_timespan_viewer_results.png" alt="test image">
+
+              <img class="img-fluid mb-5 border" src="img/reddit-timespan/full_index_page.png" alt="Timespan View Search results">
+
+              <h4>Project Info</h4>
+              <p>
+                Began a project wanting to improve my experience working with external APIs. Through research discovered the PushShift API for obtaining reddit data and 
+                thought to combine this with the imdb-api to create an application.
+              </p>
+              <p>
+                The app prompts you with a form to enter the name of the subreddit you wish to view. This input includes an auto complete feature to help users find the 
+                correct subreddit. You can then select a date range to view posts between using the two linked date pickers. (If no date range is supplied the app acts 
+                as a wrapper showing the top posts from the selected subreddit).
+              </p>
+              <img class="img-fluid mb-2 border" src="img/reddit-timespan/subreddit_auto_complete.png" alt="Timespan view subreddit auto complete">
+              <img class="img-fluid mb-5 border" src="img/reddit-timespan/subreddit_auto_complete_code.png" alt="Timespan view subreddit auto complete code">
+
+
+              <p>
+                The app also includes a "TV Show Helper" section. This feature allows uses to search for a TV Series title and recieve back information about its seasons 
+                and episodes specifically the release dates of each episode. This feature make use of https://imdb-api.com/ to obtain the title, season and episode 
+                info of the requested series.
+                A user can enter a TV show name and search, and will be returned the titles most similar to what was entered. From this list the user can select the series
+                they were searching for, or can try another search if it does not appear. After selecting a series the user will be returned the seasons and episodes for 
+                that series.
+
+              </p>
+              <img class="img-fluid mb-3 border" src="img/reddit-timespan/search_waiting.png" alt="Timespan view search waiting">
+              <img class="img-fluid mb-3 border" src="img/reddit-timespan/search_result.png" alt="Timespan view search result">
+              <img class="img-fluid mb-5 border" src="img/reddit-timespan/episode_result.png" alt="Timespan view episode search result">
+
+              <img class="img-fluid mb-5 border" src="img/reddit-timespan/search_series_code.png" alt="Timespan view episode search result">
+
+              <p>
+                I wanted to experiment with the HTML drag and drop api, so implemented a feature allowing users to drag episodes dates from the search results into the date 
+                input boxes directly so no additional typing or use of the date picker is required. 
+              </p>
+
+              <p>
+                The search results are obtained using the PushShift API's subreddit endpoint. The results will show the top 100 posts that match the supplied criteria of 
+                subreddit name and date range.
+              </p>
+
+              <img class="img-fluid mb-3 border" src="img/reddit-timespan/reddit_timespan_viewer_results.png" alt="Timespan view resultspage">
+              <img class="img-fluid mb-3 border" src="img/reddit-timespan/pushshift_search_code.png" alt="Timespan view resultspage">
+
+
+
+
+
+
 
             </div>
           </div>
 
+
+
+          <hr/>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
@@ -295,10 +357,16 @@
                 monitoring a search engine system. This project was a good challenge and allowed me to deeper my knowledge and experience with using both Google Cloup 
                 Platform and AWS.
               </div>
-              <img class="img-fluid" src="img/my-implementation.png" alt="test image">
+              <img class="img-fluid" src="img/cloud-search/my-implementation.png" alt="test image">
 
               <h4>Idexer Component</h4>
-              <img class="img-fluid" src="img/indexer_component.png" alt="test image">
+              <img class="img-fluid border mb-5" src="img/cloud-search/indexer_component.png" alt="test image">
+
+              <h4>Advert Component</h4>
+              <img class="img-fluid border mb-5" src="img/cloud-search/advert_component.png" alt="test image">
+
+              <h4>Search Component</h4>
+              <img class="img-fluid border mb-5" src="img/cloud-search/Search_component.png" alt="test image">
 
 
             </div>
