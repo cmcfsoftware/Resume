@@ -357,18 +357,146 @@
                 monitoring a search engine system. This project was a good challenge and allowed me to deeper my knowledge and experience with using both Google Cloup 
                 Platform and AWS.
               </div>
+
               <img class="img-fluid" src="img/cloud-search/my-implementation.png" alt="test image">
 
+
+
+              <p>
+                The system was composed of three components: 
+                <ul>
+                  <li>A spider indexer that could crawl the web and collect data from pages (was a good citizen that implemented best practices).</li>
+                  <li>An advert system that contains a directory of adverts with associated keywords that could be displayed alongside search results
+                    or could be embedded onto thirdparty sites/services.</li>
+                  <li>A search system that takes user input and returns results by querying the indexed pages and would show relevant adverts alongside the
+                    search results.</li>
+                </ul>
+                Each of the components had a web frontend to faciliate user interaction. These web apps and their backend databases were run on Googles 
+                Cloud Platform making use of their kubernetes engine to provide the web apps and using MYSQL databases hosted on the GCP's Cloud SQL 
+                service to store the required data.  
+                I decided on using GCP as my main provider for implmenting the system where the apps were run in the GKE clusters. I also deployed the apps to AWS EC2 instances
+                for redundancy and to show that the underlying code base was provider agnostic.
+
+              </p>
+              
+
               <h4>Idexer Component</h4>
-              <img class="img-fluid border mb-5" src="img/cloud-search/indexer_component.png" alt="test image">
+              <img class="img-fluid border mb-5" src="img/cloud-search/indexer/indexer_component.png" alt="test image">
+              <p>
+                In the indexer a user can provide a URL to a web frontend to allow the system to scrape that page and add it to the database. 
+              </p>
+
+              <img class="img-fluid border mb-3" src="img/cloud-search/indexer/indexer-add.png" alt="test image">
+              <p>
+                After successfully indexing the page you are given the option to crawl the other URLs that were found within the content
+                of the page that has just been indexed.
+              </p>
+              <img class="img-fluid border mb-3" src="img/cloud-search/indexer/index-add-success.png" alt="test image">
+              <p>
+                Image showing how indexed pages appear in the search component.
+              </p>
+              <img class="img-fluid border mb-3" src="img/cloud-search/indexer/index-in-search.png" alt="test image">
+              <p>
+                Below shows some of the the code for the implementation of the Indexer component
+              </p>
+
+              <img class="img-fluid border mb-5" src="img/cloud-search/indexer/indexer-code.png" alt="test image">
+
+
 
               <h4>Advert Component</h4>
-              <img class="img-fluid border mb-5" src="img/cloud-search/advert_component.png" alt="test image">
+              <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert_component.png" alt="test image">
+
+              <p>The advert component allows users to submit new adverts into the database. The user can submit advert content and provide
+                a list of keyword terms that they want their advert to be associated with, they can also provide a url for the advert to link to.
+              </p>
+
+              <img class="img-fluid border mb-3" src="img/cloud-search/advert/Advert-main.png" alt="test image">
+              <img class="img-fluid border mb-3" src="img/cloud-search/advert/Advert-success.png" alt="test image">
+              <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert-add-code.png" alt="test image">
+
+              <p>
+                The component also has a json endpoint to provide requests with relevant advert data. A user can make a request to the endpoint 
+                providing keyword(s) and will recieve back a json response of adverts containing those keywords.
+              </p>
+
+              <p>Example response from the advert component when requesting adverts with the keyword "lemon":</p>
+              <img class="img-fluid border mb-3" src="img/cloud-search/advert/advert-endpoint.png" alt="test image">
+              <p>Below shows some of the code for the advert json endpoint:</p>
+              <img class="img-fluid border mb-5" src="img/cloud-search/advert/advert-endpoint-code.png" alt="test image">
+
 
               <h4>Search Component</h4>
-              <img class="img-fluid border mb-5" src="img/cloud-search/Search_component.png" alt="test image">
+              <img class="img-fluid border mb-5" src="img/cloud-search/search/Search_component.png" alt="test image">
+
+              <p>
+                The search component provides users with a web frontend allowing them to input a search term to to query against the indexed pages.
+                The search results will show any indexed pages containing any of the search term and will also display relevant advert alongside the results.
+              </p>
+
+              
+              <img class="img-fluid border mb-3" src="img/cloud-search/search/search-index.png" alt="test image">
+              <p>Image showing search results for the term "search". (The blue advert shown is this image was part of the database initialisation provided to by David Cutting
+                the lecturer of my Cloud Computing Module in which he pokes fun at a testing system of his own creation).
+              </p>
+              <img class="img-fluid border mb-3" src="img/cloud-search/search/search-result.png" alt="test image">
+              <img class="img-fluid border mb-5" src="img/cloud-search/search/search-code.png" alt="test image">
 
 
+              <h4>Provisioning and Scripting</h4>
+              
+              <p>Each of the apps were deployed as a containerised web app. Below you can see the dockerfile for the search component and the 
+                deployment.yaml and service.yaml for use in provisioning and setup of its Kubernetes cluster.
+              </p>
+
+              <img class="img-fluid border mb-3" src="img/cloud-search/scripting/search-docketfile.png" alt="test image">
+              <img class="img-fluid border mb-3" src="img/cloud-search/scripting/search-deployment.png" alt="test image">
+              <img class="img-fluid border mb-5" src="img/cloud-search/scripting/search-service.png" alt="test image">
+
+              <p>
+                The project contains both setup and teardown scripts that can be used to provision and manage 
+                the resources for GCP. 
+              </p>
+              <p>
+                The first script that is run is the api_enable.sh this script ensure that the required APIs are enable for 
+                the project before any of the provision of resources begins:
+              </p>
+              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-enable.png" alt="test image">
+
+              
+              <p>
+                Script for VPC setup and linking API services:
+              </p>
+              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-vpc-setup.png" alt="test image">
+
+              
+              <p>
+                DB setup script configurability at top:
+              </p>
+              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-db-setup.png" alt="test image">
+
+              
+              <p>
+                KE setup:
+              </p>
+              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-ke-setup.png" alt="test image">
+
+
+              <p>
+                KE teardown:
+              </p>
+              
+              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-ke-teardown.png" alt="test image">
+              
+
+              <p>
+                DB teardown:
+              </p>
+              <img class="img-fluid border mb-4" src="img/cloud-search/scripting/script-db-teardown.png" alt="test image">
+
+
+
+            
             </div>
           </div>
 
